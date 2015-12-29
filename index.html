@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IdleRPG</title>
+  <link rel="icon" type="image/png" href="img/book.gif" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="header">
+    <h1>IdleRPG</h1>
+  </div>
+
+  <div id="page">
+
+    <div class="sidebar" id="left">
+
+      <div class="box">
+        <div id="navigation">
+          <ul>
+            <li>
+              <a class="activated" href="#">Training</a>
+            </li>
+            <li>
+              <a href="#">Quests</a>
+            </li>
+            <li>
+              <a href="#">Shop</a>
+            </li>
+            <li>
+              <a href="#">Worlds</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bloc" id="board">
+          <ul id="zones"></ul>
+          <ul id="quests" class="invisible"><li>The gobelin army</li><li>The lost princess</li><li>Kill the death</li></ul>
+          <div id="shop"  class="invisible"><button>Sell</button></div>
+        </div>
+        <div id="info">
+          <div class="box" id="quest-info">
+            <div class="header">
+              <h2>Quests</h2>
+            </div>
+            <div class="bloc">
+              <ul>
+                <li>Crown found : 0 / 1</li>
+                <li>Forces found : 0 / 3</li>
+                <li>Death killed : 0 / 1</li>
+              </ul>
+            </div>
+          </div>
+          <div class="box" id="monster-info">
+            <div class="header">
+              <h2 id="monster-name">Monster</h2>
+            </div>
+            <div class="bloc">
+              <table class="stats">
+                <tr>
+                  <td><img src="img/skull.png"></td>
+                  <td>
+                    <div id="monster-life" class="data-bar">
+                      <p></p>
+                      <div class="progress" id="monster-progress"></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><img src="img/sword.png"></td>
+                  <td id="monster-attack"></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="textbox">
+        <p>The game is in development.</p>
+        <div class="progress"></div>
+      </div>
+
+      <div id="text-progress">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="sidebar" id="right">
+
+      <div id="console">
+      </div>
+
+      <div class="box" id="character">
+        <div class="header">
+          <h2>Character</h2>
+        </div>
+        <div class="bloc">
+          <table class="stats">
+            <tr>
+              <td><img src="img/heart.png"></td>
+              <td>
+                <div id="life" class="data-bar">
+                  <p></p>
+                  <div class="progress"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>XP:</td>
+              <td>
+                <div id="xp" class="data-bar">
+                  <p></p>
+                  <div class="progress"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Level:</td>
+              <td id="level"></td>
+            </tr>
+            <tr>
+              <td><img src="img/sword.png"></td>
+              <td id="attack"></td>
+            </tr>
+            <tr>
+              <td><img src="img/coin.png"></td>
+              <td id="coins"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="box" id="bag">
+        <div class="header">
+          <div id="navigation">
+            <ul>
+              <li id="inventory">
+                <a class="activated" href="#">Inventory</a>
+              </li>
+              <li id="equipment">
+                <a href="#">Equipment</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="bloc">
+          <table id="inventoryTable"></table>
+          <table id="equipmentTable">
+            <tr>
+              <td>Head:</td>
+              <td id="equipment-head">none</td>
+            </tr>
+            <tr>
+              <td>Chest:</td>
+              <td id="equipment-chest">none</td>
+            </tr>
+            <tr>
+              <td>Legs:</td>
+              <td id="equipment-legs">none</td>
+            </tr>
+            <tr>
+              <td>Weapon:</td>
+              <td id="equipment-weapon">none</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+  <script type="text/javascript" src="javascript/interface.js"></script>
+  <script type="text/javascript" src="javascript/console.js"></script>
+  <script type="text/javascript" src="javascript/inventory.js"></script>
+  <script type="text/javascript" src="javascript/character.js"></script>
+  <script type="text/javascript" src="javascript/monster.js"></script>
+  <script type="text/javascript" src="javascript/game.js"></script>
+
+</body>
+</html>

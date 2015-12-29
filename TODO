@@ -1,0 +1,27 @@
+Jeu :
+- Loading.
+- <?> Animation de heal entre combats.
+- Journal de quête.
+- Sauvegarde.
+
+Design : 
+- <?> Afficher les dégats subit sur le monstre et le personnage par un -dégats.
+- <?> indicateur de difficulté.
+
+Général : 
+- Ranger le code : .html, .css, .js.
+- Ajouter des données au .json.
+- Function pour boucle de temps.
+- <???> Trouver un nom au jeu.
+- <???> Notion de voyage.
+- <???> générer des phrases descriptives d'attaques ? De rencontre ?
+- Liste d'inventaire avec nombre incrémenté quand push.
+
+Bugs :
+- Css sans écrire Monster en dur ne doit pas rétrécir.
+- Vérifier code généré (exemple: inventaire)
+
+Prochainement :
+- <!> Rendre le jeu et les rates plus cohérents. (regeneration)
+- <!> Donjons.
+- <!> Gestion des onglets.
