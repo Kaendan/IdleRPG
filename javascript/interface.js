@@ -66,6 +66,21 @@ var interface = {
 		document.getElementById(menu).getElementsByTagName('a')[0].className = "activated";
 		document.getElementById(menu+"Table").style.display = "table";
 	},
+	showMenu: function (onglet) {
+		var menus = document.getElementsByClassName("menu");
+		for (var i = 0; i < menus.length; i++) {
+			menus[i].className = "menu invisible";
+		};
+
+		var menuId = onglet.innerHTML.toLowerCase()
+		document.getElementById(menuId).className = "menu";
+
+		var onglets = document.getElementById("menus").getElementsByTagName("a");
+		for (var i = 0; i < menus.length; i++) {
+			onglets[i].className = "";
+		};
+		onglet.className = "activated";
+	},
 	addObject: function (object) {
 		var objectId = "object_" + object.id;
 		if(!document.getElementById(objectId)) {

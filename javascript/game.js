@@ -24,16 +24,10 @@ for (var i in data.worlds[0].zones) {
     }
   };
 
-  document.getElementById("zones").appendChild(li);
+  document.getElementById("training").getElementsByTagName("ul")[0].appendChild(li);
 };
 
-//Faire un for each onglet (navigation.a ou li)
-document.getElementById("inventory").onclick = function() {
-  interface.changeInventoryMenu("inventory");
-};
-document.getElementById("equipment").onclick = function() {
-  interface.changeInventoryMenu("equipment");
-};
+addEvents();
 
 interface.updateCharacter();
 

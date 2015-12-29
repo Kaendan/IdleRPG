@@ -15,7 +15,7 @@
     <div class="sidebar" id="left">
 
       <div class="box">
-        <div id="navigation">
+        <div id="menus" class="navigation">
           <ul>
             <li>
               <a class="activated" href="#">Training</a>
@@ -33,9 +33,36 @@
         </div>
 
         <div class="bloc" id="board">
-          <ul id="zones"></ul>
-          <ul id="quests" class="invisible"><li>The gobelin army</li><li>The lost princess</li><li>Kill the death</li></ul>
-          <div id="shop"  class="invisible"><button>Sell</button></div>
+          <div id="training" class="menu">
+            <ul class="zones"></ul>
+          </div>
+          <div id="quests" class="menu invisible">
+            <ul>
+              <li>The gobelin army</li>
+              <li>The spoon</li>
+              <li>The lost princess</li>
+              <li>Kill the death</li>
+            </ul>
+          </div>
+          <div id="shop"  class="menu invisible">
+            <button>Sell</button>
+            <ul>
+              <li>Head</li>
+              <li>Chest</li>
+              <li>Legs</li>
+              <li>Weapon</li>
+            </ul>
+          </div>
+          <div id="worlds"  class="menu invisible">
+            <ul class="zones">
+              <li>World 1</li>
+              <li>World 2</li>
+              <li>World 3</li>
+              <li>World 4</li>
+              <li>World 5</li>
+              <li>World 6</li>
+            </ul>
+          </div>
         </div>
         <div id="info">
           <div class="box" id="quest-info">
@@ -45,7 +72,7 @@
             <div class="bloc">
               <ul>
                 <li>Crown found : 0 / 1</li>
-                <li>Forces found : 0 / 3</li>
+                <li>Rusty Spoon found : 0 / 1</li>
                 <li>Death killed : 0 / 1</li>
               </ul>
             </div>
@@ -86,9 +113,7 @@
     </div>
 
     <div class="sidebar" id="right">
-
-      <div id="console">
-      </div>
+      <div id="console"></div>
 
       <div class="box" id="character">
         <div class="header">
@@ -132,7 +157,7 @@
 
       <div class="box" id="bag">
         <div class="header">
-          <div id="navigation">
+          <div class="navigation">
             <ul>
               <li id="inventory">
                 <a class="activated" href="#">Inventory</a>
@@ -169,10 +194,11 @@
     </div>
   </div>
   
-  <script type="text/javascript" src="javascript/interface.js"></script>
-  <script type="text/javascript" src="javascript/console.js"></script>
-  <script type="text/javascript" src="javascript/inventory.js"></script>
   <script type="text/javascript" src="javascript/character.js"></script>
+  <script type="text/javascript" src="javascript/console.js"></script>
+  <script type="text/javascript" src="javascript/events.js"></script>
+  <script type="text/javascript" src="javascript/interface.js"></script>
+  <script type="text/javascript" src="javascript/inventory.js"></script>
   <script type="text/javascript" src="javascript/monster.js"></script>
   <script type="text/javascript" src="javascript/game.js"></script>
 

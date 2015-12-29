@@ -166,7 +166,7 @@ ul > li {
 	padding: 0;
 }
 
-#zones li {
+.zones li {
     margin: 0 0.5em 1em 0.5em;
     display: inline-block;
     line-height: 2em;
@@ -250,7 +250,7 @@ ul > li {
     height: 9em;
 }
 
-#navigation ul {
+.navigation ul {
     padding: 0;
     margin: 0;
     text-align: left;
@@ -261,12 +261,12 @@ ul > li {
     font-size: 0.95em;
 }
 
-#navigation li {
+.navigation li {
     display: inline-block;
     margin: 0;
 }
 
-#navigation a {
+.navigation a {
     background: white;
     display: block;
     color: black;
@@ -275,22 +275,22 @@ ul > li {
     font-weight: bold;
 }
 
-#navigation a:hover {
+.navigation a:hover {
     background: rgba(0, 0, 0, 0.8);
     color: white;
 }
 
-#navigation .activated {
+.navigation .activated {
     background: rgba(0, 0, 0, 0.8);
     color: white;
 }
 
-#bag #navigation li {
+#bag .navigation li {
     text-align: center;
     width: 49%;
 }
 
-#bag #navigation a {
+#bag .navigation a {
     padding: 1em 0;
 }
 
