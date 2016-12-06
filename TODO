@@ -3,10 +3,13 @@ Jeu :
 - <?> Animation de heal entre combats.
 - Journal de quête.
 - Sauvegarde.
+- Feedback lors d'un achat d'objet.
+- Bug d'affichage petite barre blanche sur le coté de shop et quests
 
 Design : 
 - <?> Afficher les dégats subit sur le monstre et le personnage par un -dégats.
 - <?> indicateur de difficulté.
+- Ajout du message combat trouvé
 
 Général : 
 - Ranger le code : .html, .css, .js.
@@ -15,7 +18,7 @@ Général :
 - <???> Trouver un nom au jeu.
 - <???> Notion de voyage.
 - <???> générer des phrases descriptives d'attaques ? De rencontre ?
-- Liste d'inventaire avec nombre incrémenté quand push.
+- Débloquer zones les unes après les autres
 
 Bugs :
 - Css sans écrire Monster en dur ne doit pas rétrécir.
@@ -24,4 +27,7 @@ Bugs :
 Prochainement :
 - <!> Rendre le jeu et les rates plus cohérents. (regeneration)
 - <!> Donjons.
-- <!> Gestion des onglets.
+
+- <?>Ne pas se battre en étant dans le shop.
+- <?>Arrêter combat quand on change d’onglet.
+- Village : Shop, etc

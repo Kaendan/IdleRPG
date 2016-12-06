@@ -1,0 +1,33 @@
+Regles :
+
+	Un Idle-Game reprenant les mécaniques d'un RPG.
+
+	But du jeu : Devenir le plus fort possible et aller le plus loin possible dans l'aventure. Effectuer de nombreux objectifs et parcourir le monde.
+
+	Déroulement du jeu : Le joueur manage le personnage, le héros, en lui indiquant ce qu'il doit faire. Les actions du héros prendrons ainsi du temps.
+
+	Les actions possibles sont : S'entrainer contre des monstres, Effectuer des quêtes, changer de zone, effectuer un job, acheter des items, vendre des items.
+
+	Entrainement : Le héros part combattre pour s'entrainer, gagner de l'xp et looter des items. Cela lui permet de devenir plus fort et de venir à bout d'objectifs jusqu'alors trop difficiles. Entre chaque combat qu'il effectue, le héros se soigne et retrouve tous ses points de vie.
+
+	Donjon : Zone d'entrainement plus dure avec un boss
+
+	Boss : Les boss représentent des combats plus difficiles que les monstres que l'on rencontre lors des entrainements. Si le héros n'est pas assez fort, il peut tout simplement perdre contre le boss. Le boss est accessible dans le donjon du niveau.
+
+	Changement de zone : Les nouvelles zones ne sont accessible qu'après avoir battu le boss de la zone précédente. Les nouvelles zones proposent de nouvelles quêtes et de nouveaux monstres donnant plus d'xp.
+
+	Achat et vente d'item : Les achats sont effectuer dans la boutique du marchand par le joueur. Les ventes quant à elles sont effectuées par le héros lui même sous la demande du joueur. L'argent obtenu peut varier selon la capacité du héros à marchander.
+
+	Loot d'item : Lorsque le héros loot un nouvel objet, il l'équipe automatiquement si celui-ci est meilleur qu'un de ses objets actuellement équipés.
+	Si l'objet est moins bien, il est placé dans l'inventaire avec les autre objets à vendre.
+
+	Quêtes : Il y a plusieurs sortes de quêtes. Les quêtes de job, nécessitant du temps, et les quêtes de combat, nécessitant que le héros soit assez fort pour venir à bout des monstres qu'il combattra. Quête d’élimination : Vaincre un ou plusieurs monstres spécifique trouvé aléatoirement dans une zone d'entrainement. Les quêtes de boss donnant une récompense après avoir vaincu le boss, et les quêtes de farm nécessitant de fournir des objets trouvés lors de l'entrainement. Les objets peuvent être trouvés sur des monstres spécifiques avec un certain taux de drop.
+
+	Nouveaux objets : meilleur = automatiquement équipé. Moins bien = vendu.
+
+	Perte au combat : Si le héros perd au combat, il rentre se reposer pour retrouver ses points de vie. Cela prend du temps.
+
+Interface :
+
+	Menus : équipement, marchand (acheter et vendre), inventaire (visible ?), quêtes, entrainement, fiche personnage, barre d'information, Zones
+

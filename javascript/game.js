@@ -1,34 +1,9 @@
 var interval = null;
 var time = null;
-
-function loadJSON(file) {   
-  var request = new XMLHttpRequest();
-  request.open('GET', file, false);
-  request.send();  
-  return data = JSON.parse(request.responseText);
-}
-
 var data = loadJSON('data/data.json');
 
-for (var i in data.worlds[0].zones) {
-  var li = document.createElement("li");
-  li.innerHTML = data.worlds[0].zones[i].name;
-  li.value = i;
-
-  li.onclick = function() {
-    if(character.life > 0 && character.state != "dead") {
-      train(this.value);
-    }
-    else {
-      gameConsole.addLog("you're unconscious.");
-    }
-  };
-
-  document.getElementById("training").getElementsByTagName("ul")[0].appendChild(li);
-};
-
+loadData();
 addEvents();
-
 interface.updateCharacter();
 
 function train(zoneId) {

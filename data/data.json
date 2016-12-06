@@ -49,7 +49,8 @@
 			"quests": [
 				{"name": "Au secours !", "xp": 10, "coins": 5, "inventory": []},
 				{"name": "Docteur !", "xp": 10, "coins": 5, "inventory": []}
-			]
+			],
+			"shop": [0, 1, 5]
 		},
 		{	
 			"name": "Asia",
@@ -79,7 +80,8 @@
 			"quests": [
 				{"name": "Yamate!", "xp": 10, "coins": 5, "inventory": []},
 				{"name": "Oni-San!", "xp": 10, "coins": 5, "inventory": []}
-			]
+			],
+			"shop": [6, 7, 8]
 		}
 	],
 	"objects": [
@@ -89,8 +91,8 @@
 		{"id": 3, "type": "legs", "name": "dirty panty", "value": 100, "rate": 25, "life": 1},
 		{"id": 4, "type": "head", "name": "crown", "value": 100, "rate": 75, "life": 3},
 		{"id": 5, "type": "head", "name": "helmet", "value": 100, "rate": 75, "life": 3},
-		{"id": 6, "type": "chest", "name": "leather chest", "value": 100, "rate": 100, "life": 1},
-		{"id": 7, "type": "head", "name": "leather head", "value": 100, "rate": 100, "life": 100},
-		{"id": 8, "type": "legs", "name": "leather legs", "value": 100, "rate": 100, "life": 1}
+		{"id": 6, "type": "chest", "name": "leather chest", "value": 10, "rate": 100, "life": 1},
+		{"id": 7, "type": "head", "name": "leather head", "value": 10, "rate": 100, "life": 1},
+		{"id": 8, "type": "legs", "name": "leather legs", "value": 10, "rate": 100, "life": 1}
 	]
 }

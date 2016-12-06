@@ -175,6 +175,10 @@ ul > li {
     border: 2px solid silver;
 }
 
+.zones .selected {
+    background-color: gray;
+}
+
 #board li:hover {
 	background-color: white;
 	color: black;
@@ -322,12 +326,70 @@ ul > li {
     width: 100%;
 }
 
-#bag tr > td:nth-child(1x){
+#bag tr > td:nth-child(1){
     list-style-type: square;
 }
 
 #bag tr > td:nth-child(2){
     text-align: right;
+}
+
+#shop {
+    background-color: white;
+    text-transform: capitalize;
+    padding: 0;
+    position: relative;
+}
+
+#shop div {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: inline-block;
+    height: 12.5em;
+    width: 49.45%;
+    vertical-align: text-top;;
+}
+
+#shop li {
+    list-style-type: none;
+}
+
+#sell_button {
+    background-color: gray;
+    border: 2px solid white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    width: 20%;
+}
+
+#quests {
+    background-color: white;
+    text-transform: capitalize;
+    padding: 0;
+}
+
+#quests div {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: inline-block;
+    height: 12.5em;
+    width: 49.45%;
+    vertical-align: text-top;;
+}
+
+#quests li {
+    list-style-type: none;
+}
+
+.button {
+    background-color: none;
+    margin: 0 0.5em 1em 0.5em;
+    display: inline-block;
+    line-height: 2em;
+    padding: 1em;
+    width: 5em;
+    border: 2px solid silver;
 }
 
 #textbox {

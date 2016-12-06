@@ -12,6 +12,11 @@ function addClickEvents(e) {
             interface.showMenu(this.getElementsByTagName("a")[0]);
         };
     };
+
+    var sell_button = document.getElementById("sell_button");
+    sell_button.onclick = function() {
+        inventory.sell();
+    };
 }
 
 function addEvents() {

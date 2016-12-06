@@ -105,67 +105,82 @@ var character = {
 		this.coins += coins;
 		interface.updateCoins();
 	},
+	pay: function (coins) {
+		this.coins -= coins;
+		interface.updateCoins();
+	},
 	loot: function (monster) {
 		if(monster.inventory.length > 0) {
 			for (var i = monster.inventory.length - 1; i >= 0; i--) {
 				var rand = Math.floor((Math.random() * 100) + 1);
 				var object = data.objects[monster.inventory[i]];
 				if(rand <= object.rate) {															
-					if (object.type == 'weapon' && this.equipment.weapon.attack < object.attack) {
-						if (this.equipment.weapon.name != "none") {
-							this.inventory.push(this.equipment.weapon);
-							interface.addObject(this.equipment.weapon);
-							this.armorAttack -= this.equipment.weapon.attack;
-						}					
-						this.equipment.weapon = object;
-						interface.equip(object);
-						this.armorAttack += object.attack;
-						this.attack = this.rawAttack + this.armorAttack;
-						interface.updateAttack();
-					}
-					else if (object.type == 'head' && this.equipment.head.life < object.life) {
-						if (this.equipment.head.name != "none") {
-							this.inventory.push(this.equipment.head);
-							interface.addObject(this.equipment.head);
-							this.armorLife -= this.equipment.head.life;
-						}										
-						this.equipment.head = object;
-						interface.equip(object);
-						this.armorLife += object.life;
-						this.maxLife = this.rawMaxLife + this.armorLife;
-						interface.updateLife();
-					}
-					else if (object.type == 'chest' && this.equipment.chest.life < object.life) {
-						if (this.equipment.chest.name != "none") {
-							this.inventory.push(this.equipment.chest);
-							interface.addObject(this.equipment.chest);
-							this.armorLife -= this.equipment.chest.life;
-						}						
-						this.equipment.chest = object;
-						interface.equip(object);
-						this.armorLife += object.life;
-						this.maxLife = this.rawMaxLife + this.armorLife;
-						interface.updateLife();
-					}
-					else if (object.type == 'legs' && this.equipment.legs.life < object.life) {
-						if (this.equipment.legs.name != "none") {
-							this.inventory.push(this.equipment.legs);
-							interface.addObject(this.equipment.legs);
-							this.armorLife -= this.equipment.legs.life;
-						}						
-						this.equipment.legs = object;
-						interface.equip(object);
-						this.armorLife += object.life;
-						this.maxLife = this.rawMaxLife + this.armorLife;
-						interface.updateLife();
-					}
-					else {						
-						this.inventory.push(object);
-						interface.addObject(object);
-					};
+					this.gainObject(object);
 				}
 			};
 		}
+	},
+	gainObject: function (object) {													
+		if (object.type == 'weapon' && this.equipment.weapon.attack < object.attack) {
+			if (this.equipment.weapon.name != "none") {
+				this.inventory.push(this.equipment.weapon);
+				interface.addObject(this.equipment.weapon);
+				this.armorAttack -= this.equipment.weapon.attack;
+			}					
+			this.equipment.weapon = object;
+			interface.equip(object);
+			this.armorAttack += object.attack;
+			this.attack = this.rawAttack + this.armorAttack;
+			interface.updateAttack();
+		}
+		else if (object.type == 'head' && this.equipment.head.life < object.life) {
+			if (this.equipment.head.name != "none") {
+				this.inventory.push(this.equipment.head);
+				interface.addObject(this.equipment.head);
+				this.armorLife -= this.equipment.head.life;
+			}										
+			this.equipment.head = object;
+			interface.equip(object);
+			this.armorLife += object.life;
+			this.maxLife = this.rawMaxLife + this.armorLife;
+			interface.updateLife();
+		}
+		else if (object.type == 'chest' && this.equipment.chest.life < object.life) {
+			if (this.equipment.chest.name != "none") {
+				this.inventory.push(this.equipment.chest);
+				interface.addObject(this.equipment.chest);
+				this.armorLife -= this.equipment.chest.life;
+			}						
+			this.equipment.chest = object;
+			interface.equip(object);
+			this.armorLife += object.life;
+			this.maxLife = this.rawMaxLife + this.armorLife;
+			interface.updateLife();
+		}
+		else if (object.type == 'legs' && this.equipment.legs.life < object.life) {
+			if (this.equipment.legs.name != "none") {
+				this.inventory.push(this.equipment.legs);
+				interface.addObject(this.equipment.legs);
+				this.armorLife -= this.equipment.legs.life;
+			}						
+			this.equipment.legs = object;
+			interface.equip(object);
+			this.armorLife += object.life;
+			this.maxLife = this.rawMaxLife + this.armorLife;
+			interface.updateLife();
+		}
+		else {						
+			this.inventory.push(object);
+			interface.addObject(object);
+		};
+	},
+	tryToTrain: function (value) {
+		if(this.life > 0 && this.state != "dead") {
+	      train(value);
+	    }
+	    else {
+	      gameConsole.addLog("you're unconscious.");
+	    }
 	}
 
 };

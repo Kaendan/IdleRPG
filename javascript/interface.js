@@ -104,5 +104,12 @@ var interface = {
 	},
 	equip: function (object) {
 		document.getElementById("equipment-"+object.type).innerHTML = object.name;
+	},
+	select: function(zone, type) {
+		var zones = document.getElementById(type).getElementsByTagName("li");
+		for (var i = 0; i < zones.length; i++) {
+			zones[i].className = "";
+		};
+		zone.className = "selected";
 	}
 }

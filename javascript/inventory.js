@@ -19,5 +19,22 @@ var inventory = {
 			number.value++;
 			number.innerHTML = number.value;
 		}
+	},
+	removeObject: function (object) {
+		var objectId = "object_" + object.id;
+		var obj = document.getElementById(objectId)
+		if(obj) {
+			obj.parentNode.removeChild(obj);
+		}
+	},
+	sell: function () {
+		var table = document.getElementById("inventoryTable").getElementsByTagName("tr");
+		var length = table.length;
+		for (var i = 0; i < length; i++) {
+			var nb = table[0].getElementsByTagName("td")[1].innerHTML;
+			var obj = data.objects[table[0].id.substring(7)];
+			inventory.removeObject(obj);
+			character.gainCoins(obj.value * nb);
+		};
 	}
 }
