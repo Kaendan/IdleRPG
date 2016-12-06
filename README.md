@@ -1,0 +1,3 @@
+# IdleRPG #
+
+![preview](/idleRPG.png)
